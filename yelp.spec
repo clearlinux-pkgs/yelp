@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 3.26.0
-Release  : 2
+Release  : 3
 URL      : https://download.gnome.org/sources/yelp/3.26/yelp-3.26.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/3.26/yelp-3.26.0.tar.xz
 Summary  : No detailed summary available
@@ -107,7 +107,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1516375783
+export SOURCE_DATE_EPOCH=1517681899
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -119,7 +119,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1516375783
+export SOURCE_DATE_EPOCH=1517681899
 rm -rf %{buildroot}
 %make_install
 %find_lang yelp
