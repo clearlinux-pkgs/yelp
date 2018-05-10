@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 3.28.1
-Release  : 5
+Release  : 6
 URL      : https://download.gnome.org/sources/yelp/3.28/yelp-3.28.1.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/3.28/yelp-3.28.1.tar.xz
 Summary  : No detailed summary available
