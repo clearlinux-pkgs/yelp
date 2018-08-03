@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 3.28.1
-Release  : 6
+Release  : 7
 URL      : https://download.gnome.org/sources/yelp/3.28/yelp-3.28.1.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/3.28/yelp-3.28.1.tar.xz
 Summary  : No detailed summary available
@@ -13,8 +13,10 @@ License  : Apache-2.0 GPL-2.0
 Requires: yelp-bin
 Requires: yelp-lib
 Requires: yelp-data
-Requires: yelp-doc
+Requires: yelp-license
 Requires: yelp-locales
+Requires: yelp-xsl
+BuildRequires : appstream-glib
 BuildRequires : bzip2-dev
 BuildRequires : docbook-xml
 BuildRequires : gettext
@@ -49,6 +51,7 @@ Lundin. Yelp is pronounced the same as the swedish word for 'help'.
 Summary: bin components for the yelp package.
 Group: Binaries
 Requires: yelp-data
+Requires: yelp-license
 
 %description bin
 bin components for the yelp package.
@@ -86,9 +89,18 @@ doc components for the yelp package.
 Summary: lib components for the yelp package.
 Group: Libraries
 Requires: yelp-data
+Requires: yelp-license
 
 %description lib
 lib components for the yelp package.
+
+
+%package license
+Summary: license components for the yelp package.
+Group: Default
+
+%description license
+license components for the yelp package.
 
 
 %package locales
@@ -107,7 +119,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523320964
+export SOURCE_DATE_EPOCH=1533313078
 %configure --disable-static
 make  %{?_smp_mflags}
 
@@ -119,8 +131,11 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1523320964
+export SOURCE_DATE_EPOCH=1533313078
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/yelp
+cp COPYING %{buildroot}/usr/share/doc/yelp/COPYING
+cp data/mathjax/LICENSE %{buildroot}/usr/share/doc/yelp/data_mathjax_LICENSE
 %make_install
 %find_lang yelp
 
@@ -378,7 +393,7 @@ rm -rf %{buildroot}
 /usr/lib64/libyelp.so
 
 %files doc
-%defattr(-,root,root,-)
+%defattr(0644,root,root,0755)
 /usr/share/gtk-doc/html/libyelp/YelpDocument.html
 /usr/share/gtk-doc/html/libyelp/YelpSettings.html
 /usr/share/gtk-doc/html/libyelp/YelpSimpleDocument.html
@@ -405,6 +420,11 @@ rm -rf %{buildroot}
 /usr/lib64/libyelp.so.0
 /usr/lib64/libyelp.so.0.0.0
 /usr/lib64/yelp/web-extensions/libyelpwebextension.so
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/yelp/COPYING
+/usr/share/doc/yelp/data_mathjax_LICENSE
 
 %files locales -f yelp.lang
 %defattr(-,root,root,-)
