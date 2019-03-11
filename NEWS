@@ -1,3 +1,47 @@
+3.32.0
+======
+* Updated translations:
+  ca    (Jordi Mas)
+  cs    (Marek Cernocky)
+  da    (Alan Mortensen)
+  de    (Tim Sabsch)
+  el    (Efstathios Iosifidis)
+  fi    (Jiri Grönroos)
+  fr    (Claude Paroz, Charles Monzat)
+  it    (Milo Casagrande)
+  ko    (Seong-ho Cho)
+  lt    (Aurimas Černius)
+  lv    (Rūdolfs Mazurs)
+  nl    (Nathan Follens)
+  pt_BR (Rafael Fontenelle)
+  ru    (Stas Solovey)
+  sr    (Марко Костић)
+  tr    (Serdar Sağlam)
+  vi    (Trần Ngọc Quân)
+  zh_TW (Yi-Jyun Pan)
+
+3.31.90
+=======
+* Fix issues when running in a sandbox (Matthias Clasen)
+* Various code cleanups (Tomas Popela)
+* Stop using GNOME app menu (Jeremy Bicha)
+* Support for keywords in search results for Mallard and DocBook (Shaun McCance)
+* Update app icon (Jakub Steiner)
+* Move from intltool to gettext (Krzesimir Nowak)
+* Updated translations:
+  es    (Daniel Mustieles)
+  fur   (Fabio Tomat)
+  gl    (Fran Dieguez)
+  hu    (Balázs Úr)
+  id    (Kukuh Syafaat)
+  ja    (Ryuta Fujii)
+  ml    (Anish Sheela)
+  nb    (Kjartan Maraas)
+  pl    (Piotr Drąg)
+  ro    (Daniel Șerbănescu)
+  sl    (Matej Urbančič)
+  sv    (Anders Jonsson)
+
 3.30.0
 ======
 * Fixed build with GCC 8 (Michael Catanzaro)
