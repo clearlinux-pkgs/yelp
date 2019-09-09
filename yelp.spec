@@ -4,10 +4,10 @@
 #
 Name     : yelp
 Version  : 3.34.0
-Release  : 14
+Release  : 15
 URL      : https://download.gnome.org/sources/yelp/3.34/yelp-3.34.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/3.34/yelp-3.34.0.tar.xz
-Summary  : Get help with GNOME
+Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0
 Requires: yelp-bin = %{version}-%{release}
@@ -18,11 +18,13 @@ Requires: yelp-locales = %{version}-%{release}
 Requires: yelp-xsl
 BuildRequires : appstream-glib
 BuildRequires : buildreq-gnome
+BuildRequires : bzip2-dev
 BuildRequires : docbook-xml
 BuildRequires : gettext
 BuildRequires : gsettings-desktop-schemas
 BuildRequires : gtk-doc
 BuildRequires : gtk-doc-dev
+BuildRequires : itstool
 BuildRequires : libgcrypt-dev
 BuildRequires : libgpg-error-dev
 BuildRequires : libxslt-bin
@@ -42,8 +44,10 @@ BuildRequires : pkgconfig(yelp-xsl)
 BuildRequires : yelp-xsl
 
 %description
-This is a copy of a subset of the files in the MathJax repository:
-https://github.com/mathjax/mathjax/
+Yelp is the default help viewer for the GNOME desktop.  Yelp provides
+a simple graphical interface for viewing Mallard, DocBook, HTML, man,
+and info formatted documentation.  The name Yelp was suggested by Daniel
+Lundin. Yelp is pronounced the same as the swedish word for 'help'.
 
 %package bin
 Summary: bin components for the yelp package.
@@ -70,7 +74,6 @@ Requires: yelp-lib = %{version}-%{release}
 Requires: yelp-bin = %{version}-%{release}
 Requires: yelp-data = %{version}-%{release}
 Provides: yelp-devel = %{version}-%{release}
-Requires: yelp = %{version}-%{release}
 Requires: yelp = %{version}-%{release}
 
 %description dev
@@ -119,8 +122,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568045398
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1568063967
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -140,7 +142,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1568045398
+export SOURCE_DATE_EPOCH=1568063967
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/yelp
 cp COPYING %{buildroot}/usr/share/package-licenses/yelp/COPYING

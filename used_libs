@@ -1,5 +1,5 @@
 libatk-1.0.so.0
-libbz2.so.0
+libbz2.so.1.0
 libc.so.6
 libcairo-gobject.so.2
 libcairo.so.2
