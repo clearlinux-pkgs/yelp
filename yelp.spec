@@ -4,10 +4,10 @@
 #
 Name     : yelp
 Version  : 3.34.0
-Release  : 16
+Release  : 17
 URL      : https://download.gnome.org/sources/yelp/3.34/yelp-3.34.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/3.34/yelp-3.34.0.tar.xz
-Summary  : No detailed summary available
+Summary  : Get help with GNOME
 Group    : Development/Tools
 License  : Apache-2.0 GPL-2.0
 Requires: yelp-bin = %{version}-%{release}
@@ -15,6 +15,7 @@ Requires: yelp-data = %{version}-%{release}
 Requires: yelp-lib = %{version}-%{release}
 Requires: yelp-license = %{version}-%{release}
 Requires: yelp-locales = %{version}-%{release}
+Requires: gnome-getting-started-docs
 Requires: yelp-xsl
 BuildRequires : appstream-glib
 BuildRequires : buildreq-gnome
@@ -44,10 +45,8 @@ BuildRequires : pkgconfig(yelp-xsl)
 BuildRequires : yelp-xsl
 
 %description
-Yelp is the default help viewer for the GNOME desktop.  Yelp provides
-a simple graphical interface for viewing Mallard, DocBook, HTML, man,
-and info formatted documentation.  The name Yelp was suggested by Daniel
-Lundin. Yelp is pronounced the same as the swedish word for 'help'.
+This is a copy of a subset of the files in the MathJax repository:
+https://github.com/mathjax/mathjax/
 
 %package bin
 Summary: bin components for the yelp package.
@@ -122,7 +121,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1568063967
+export SOURCE_DATE_EPOCH=1568323615
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -142,7 +141,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1568063967
+export SOURCE_DATE_EPOCH=1568323615
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/yelp
 cp COPYING %{buildroot}/usr/share/package-licenses/yelp/COPYING
