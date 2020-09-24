@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 3.38.0
-Release  : 19
+Release  : 20
 URL      : https://download.gnome.org/sources/yelp/3.38/yelp-3.38.0.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/3.38/yelp-3.38.0.tar.xz
 Summary  : No detailed summary available
