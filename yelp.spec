@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 41.1
-Release  : 27
+Release  : 28
 URL      : https://download.gnome.org/sources/yelp/41/yelp-41.1.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/41/yelp-41.1.tar.xz
 Summary  : No detailed summary available
