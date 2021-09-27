@@ -1,5 +1,24 @@
-40.3
+41.1
 ====
+* Fixed validation issues in appdata file
+* Updated yelp-xsl dependency
+
+41.0
+====
+* No changes since beta2, stable release only
+
+41.beta2
+========
+* Fixed regression when opening document by file path
+* Added content rating and release info to appdata file
+
+41.beta
+=======
+* Revamped a lot of color code to avoid deprecated Gtk API (Shaun McCance)
+* Search results and 'All Help' now use current styling (Shaun McCance)
+* Fixed aliasing on the icon (Jakub Steiner)
+* Build against webkit2gtk-4.1 by default (Javier Jardón)
+* Removed calls to deprecated Soup API (Carlos Garcia Campos)
 * Updated translations:
   oc    (Quentin PAGÈS)
 

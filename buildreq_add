@@ -1,3 +1,4 @@
 libgpg-error-dev
 libgcrypt-dev
 gsettings-desktop-schemas
+webkitgtk-dev
