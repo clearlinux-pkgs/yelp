@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 41.1
-Release  : 28
+Release  : 29
 URL      : https://download.gnome.org/sources/yelp/41/yelp-41.1.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/41/yelp-41.1.tar.xz
 Summary  : No detailed summary available
@@ -122,7 +122,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1632767253
+export SOURCE_DATE_EPOCH=1632783801
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -142,7 +142,7 @@ export no_proxy=localhost,127.0.0.1,0.0.0.0
 make %{?_smp_mflags} check || :
 
 %install
-export SOURCE_DATE_EPOCH=1632767253
+export SOURCE_DATE_EPOCH=1632783801
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/yelp
 cp %{_builddir}/yelp-41.1/COPYING %{buildroot}/usr/share/package-licenses/yelp/ebc45949d86ed28d87b1dd4d9d866bd4667c87ff
