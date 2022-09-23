@@ -4,7 +4,7 @@
 #
 Name     : yelp
 Version  : 42.2
-Release  : 34
+Release  : 35
 URL      : https://download.gnome.org/sources/yelp/42/yelp-42.2.tar.xz
 Source0  : https://download.gnome.org/sources/yelp/42/yelp-42.2.tar.xz
 Summary  : No detailed summary available
