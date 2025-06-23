@@ -1,2 +1,4 @@
-42.2
-appstream-glib
+42.3
+pkgconfig(libhandy-1)
+pkgconfig(libxslt)
+pkgconfig(yelp-xsl)
